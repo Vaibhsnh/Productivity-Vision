@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Productivity Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ===========================
+            APP CONTAINER
+    ============================ -->
+
+    <div class="app-container">
+      <!-- ===========================
+                SIDEBAR
+        ============================ -->
+
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>Productivity</h2>
+          <span>Dashboard</span>
+        </div>
+
+        <nav>
+          <ul>
+            <li class="nav-item active" data-page="dashboard">
+              <i class="ri-home-5-line"></i>
+
+              <span>Dashboard</span>
+            </li>
+
+            <li class="nav-item" data-page="todo">
+              <i class="ri-checkbox-circle-line"></i>
+
+              <span>Todo</span>
+            </li>
+
+            <li class="nav-item" data-page="planner">
+              <i class="ri-calendar-line"></i>
+
+              <span>Planner</span>
+            </li>
+
+            <li class="nav-item" data-page="goals">
+              <i class="ri-focus-3-line"></i>
+
+              <span>Goals</span>
+            </li>
+
+            <li class="nav-item" data-page="pomodoro">
+              <i class="ri-timer-line"></i>
+
+              <span>Pomodoro</span>
+            </li>
+
+            <li class="nav-item" data-page="quotes">
+              <i class="ri-double-quotes-l"></i>
+
+              <span>Quotes</span>
+            </li>
+
+            <li class="nav-item" data-page="weather">
+              <i class="ri-cloud-line"></i>
+
+              <span>Weather</span>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ===========================
+                MAIN CONTENT
+        ============================ -->
+
+      <main class="main-content">
+        <!-- ===========================
+                    HEADER
+            ============================ -->
+
+        <header class="header">
+          <div class="header-left">
+            <h1>Hi There 👋</h1>
+
+            <p>Let's build something productive today.</p>
+          </div>
+
+          <div class="header-right">
+            <div class="date-time">
+              <h4 id="current-date">Wednesday, 09 July</h4>
+
+              <h2 id="current-time">10:30 PM</h2>
+            </div>
+
+            <button id="theme-toggle">🌙</button>
+          </div>
+        </header>
+
+        <!-- ===========================
+                    DASHBOARD
+            ============================ -->
+
+        <section id="dashboard" class="page active-page">
+          <div class="dashboard-grid">
+            <!-- =====================
+                            TODO
+                    ====================== -->
+
+            <div class="dashboard-card todo-card" id="todo-card">
+              <div class="card-heading">
+                <h4>Task Manager</h4>
+              </div>
+
+              <div class="card-image">
+                <img src="assets/illustrations/todo.png" alt="Todo" />
+              </div>
+
+              <div class="card-content">
+                <h2>Todo List</h2>
+
+                <p>Stay on top of every task.</p>
+              </div>
+
+              <span class="open-card">
+                Open
+                <i class="ri-arrow-right-line"></i>
+              </span>
+            </div>
+
+            <!-- =====================
+                            PLANNER
+                    ====================== -->
+
+            <div class="dashboard-card planner-card" id="planner-card">
+              <div class="card-heading">
+                <h4>Daily Schedule</h4>
+              </div>
+
+              <div class="card-image">
+                <img src="assets/illustrations/planner.png" alt="Planner" />
+              </div>
+
+              <div class="card-content">
+                <h2>Daily Planner</h2>
+
+                <p>Plan today for a better tomorrow.</p>
+              </div>
+
+              <span class="open-card">
+                Open
+                <i class="ri-arrow-right-line"></i>
+              </span>
+            </div>
+
+            <!-- =====================
+                            GOALS
+                    ====================== -->
+
+            <div class="dashboard-card goals-card" id="goals-card">
+              <div class="card-heading">
+                <h4>Daily Progress</h4>
+              </div>
+
+              <div class="card-image">
+                <img src="assets/illustrations/goals.png" alt="Goals" />
+              </div>
+
+              <div class="card-content">
+                <h2>Daily Goals</h2>
+
+                <p>Small goals. Big victories.</p>
+              </div>
+
+              <span class="open-card">
+                Open
+                <i class="ri-arrow-right-line"></i>
+              </span>
+            </div>
+
+            <!-- =====================
+                        POMODORO
+                    ====================== -->
+
+            <div class="dashboard-card pomodoro-card" id="pomodoro-card">
+              <div class="card-heading">
+                <h4>Focus Time</h4>
+              </div>
+
+              <div class="card-image">
+                <img src="assets/illustrations/pomodoro.png" alt="Pomodoro" />
+              </div>
+
+              <div class="card-content">
+                <h2>Pomodoro</h2>
+
+                <p>Focus. Break. Repeat.</p>
+              </div>
+
+              <span class="open-card">
+                Open
+                <i class="ri-arrow-right-line"></i>
+              </span>
+            </div>
+            <!-- =====================
+                            QUOTES
+                    ====================== -->
+
+            <div class="dashboard-card quotes-card" id="quotes-card">
+              <div class="card-heading">
+                <h4>Daily Inspiration</h4>
+              </div>
+
+              <div class="card-image">
+                <img src="assets/illustrations/quotes.jpg" alt="Quotes" />
+              </div>
+
+              <div class="card-content">
+                <h2>Motivation Quotes</h2>
+
+                <p>One quote can change your day.</p>
+              </div>
+
+              <span class="open-card">
+                Open
+                <i class="ri-arrow-right-line"></i>
+              </span>
+            </div>
+
+            <!-- =====================
+                            WEATHER
+                ====================== -->
+
+            <div class="dashboard-card weather-card" id="weather-card">
+              <div class="weather-top">
+                <div class="weather-location">
+                  <i class="ri-map-pin-2-fill"></i>
+                  <span id="weather-location"> Loading... </span>
+                </div>
+
+                <div class="weather-date">
+                  <span id="weather-day"> Thursday </span>
+                  <span id="weather-time"> 09:42 AM </span>
+                </div>
+              </div>
+
+              <div class="card-content">
+                <h2 id="dashboard-temperature">31°</h2>
+                <p id="dashboard-condition">Clear Sky</p>
+              </div>
+              <div class="weather-info">
+                <div class="weather-chip">
+                  <i class="ri-temp-hot-line"></i>
+                  <h5>Feels Like</h5>
+                  <span id="feels-like"> 34°</span>
+                </div>
+
+                <div class="weather-chip">
+                  <i class="ri-drop-fill"></i>
+                  <h5>Humidity</h5>
+                  <span id="humidity"> 68% </span>
+                </div>
+
+                <div class="weather-chip">
+                  <i class="ri-windy-fill"></i>
+                  <h5>Wind</h5>
+                  <span id="wind"> 12 km/h </span>
+                </div>
+              </div>
+              <span class="open-card">
+                Open
+                <i class="ri-arrow-right-line"></i>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- =====================================================
+                            TODO SECTION
+            ====================================================== -->
+
+        <section id="todo" class="page">
+          <div class="page-container">
+            <div class="page-header">
+              <h2>Todo List</h2>
+
+              <button class="close-page">
+                <i class="ri-close-line"></i>
+              </button>
+            </div>
+
+            <div class="page-banner">
+              <img src="assets/illustrations/todo.png" alt="Todo" />
+
+              <div>
+                <h3>Stay on top of every task.</h3>
+
+                <p>Add, complete, prioritize and manage your daily work.</p>
+              </div>
+            </div>
+
+            <div class="todo-input-area">
+              <input
+                type="text"
+                id="todo-input"
+                placeholder="Enter a new task"
+              />
+
+              <button id="add-todo">Add Task</button>
+            </div>
+
+            <ul id="todo-list"></ul>
+          </div>
+        </section>
+
+        <!-- =====================================================
+                        DAILY PLANNER
+            ====================================================== -->
+
+        <section id="planner" class="page">
+          <div class="page-container">
+            <div class="page-header">
+              <h2>Daily Planner</h2>
+
+              <button class="close-page">
+                <i class="ri-close-line"></i>
+              </button>
+            </div>
+
+            <div class="page-banner">
+              <img src="assets/illustrations/planner.png" alt="Planner" />
+
+              <div>
+                <h3>Plan today for a better tomorrow.</h3>
+
+                <p>Organize every hour and stay productive.</p>
+              </div>
+            </div>
+
+            <div class="planner-container">
+              <div class="planner-row">
+                <span>09:00 AM</span>
+
+                <input type="text" data-time="09:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>10:00 AM</span>
+
+                <input type="text" data-time="10:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>11:00 AM</span>
+
+                <input type="text" data-time="11:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>12:00 PM</span>
+
+                <input type="text" data-time="12:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>01:00 PM</span>
+
+                <input type="text" data-time="13:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>02:00 PM</span>
+
+                <input type="text" data-time="14:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>03:00 PM</span>
+
+                <input type="text" data-time="15:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>04:00 PM</span>
+
+                <input type="text" data-time="16:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>05:00 PM</span>
+
+                <input type="text" data-time="17:00" />
+              </div>
+
+              <div class="planner-row">
+                <span>06:00 PM</span>
+
+                <input type="text" data-time="18:00" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- =====================================================
+                            GOALS SECTION
+            ====================================================== -->
+
+        <section id="goals" class="page">
+          <div class="page-container">
+            <div class="page-header">
+              <h2>Daily Goals</h2>
+
+              <button class="close-page">
+                <i class="ri-close-line"></i>
+              </button>
+            </div>
+
+            <div class="page-banner">
+              <img src="assets/illustrations/goals.png" alt="Goals" />
+
+              <div>
+                <h3>Small goals. Big victories.</h3>
+
+                <p>Track your progress and celebrate every achievement.</p>
+              </div>
+            </div>
+
+            <div class="goals-input-area">
+              <input
+                type="text"
+                id="goal-input"
+                placeholder="Enter today's goal"
+              />
+
+              <button id="add-goal">Add Goal</button>
+            </div>
+
+            <div class="goal-progress">
+              <span>Progress</span>
+
+              <strong id="goal-progress-text"> 0 / 0 Completed </strong>
+            </div>
+
+            <ul id="goal-list"></ul>
+          </div>
+        </section>
+
+        <!-- =====================================================
+                        POMODORO SECTION
+            ====================================================== -->
+
+        <section id="pomodoro" class="page">
+          <div class="page-container">
+            <div class="page-header">
+              <h2>Pomodoro Timer</h2>
+
+              <button class="close-page">
+                <i class="ri-close-line"></i>
+              </button>
+            </div>
+
+            <div class="page-banner">
+              <img src="assets/illustrations/pomodoro.png" alt="Pomodoro" />
+
+              <div>
+                <h3>Focus. Break. Repeat.</h3>
+
+                <p>Stay productive using the Pomodoro Technique.</p>
+              </div>
+            </div>
+
+            <div class="pomodoro-container">
+              <h1 id="timer">25:00</h1>
+
+              <div class="timer-buttons">
+                <button id="start-timer">Start</button>
+
+                <button id="pause-timer">Pause</button>
+
+                <button id="reset-timer">Reset</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =====================================================
+                            QUOTES SECTION
+            ====================================================== -->
+
+        <section id="quotes" class="page">
+          <div class="page-container">
+            <div class="page-header">
+              <h2>Motivation Quotes</h2>
+
+              <button class="close-page">
+                <i class="ri-close-line"></i>
+              </button>
+            </div>
+
+            <div class="page-banner">
+              <img src="assets/illustrations/quotes.jpg" alt="Quotes" />
+
+              <div>
+                <h3>One quote can change your day.</h3>
+
+                <p>Stay inspired every single day.</p>
+              </div>
+            </div>
+
+            <div class="quote-box">
+              <p id="quote-text">Click below to load a motivational quote.</p>
+
+              <h4 id="quote-author">—</h4>
+
+              <button id="new-quote">New Quote</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =====================================================
+                            WEATHER SECTION
+            ====================================================== -->
+
+        <section id="weather" class="page">
+          <div class="page-container">
+            <div class="page-header">
+              <h2>Weather</h2>
+
+              <button class="close-page">
+                <i class="ri-close-line"></i>
+              </button>
+            </div>
+
+            <div class="page-banner">
+              <img
+                id="weather-image"
+                src="assets/weather-icons/weather-dashboard.png"
+                alt="Weather"
+              />
+
+              <div>
+                <h3 id="weather-city">Patna</h3>
+
+                <p id="weather-description">Clear Sky</p>
+              </div>
+            </div>
+
+            <div class="weather-details">
+              <div class="weather-item">
+                <span>Temperature</span>
+
+                <strong id="weather-temp"> 31°C </strong>
+              </div>
+
+              <div class="weather-item">
+                <span>Humidity</span>
+
+                <strong id="weather-humidity"> --% </strong>
+              </div>
+
+              <div class="weather-item">
+                <span>Wind Speed</span>
+
+                <strong id="weather-wind"> -- km/h </strong>
+              </div>
+
+              <div class="weather-item">
+                <span>Feels Like</span>
+
+                <strong id="weather-feels"> --°C </strong>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
